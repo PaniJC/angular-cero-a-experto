@@ -4,8 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { GifsModule } from './gifs/gifs.module';
-
+import { PaisModule } from './pais/pais.module';
+import { appRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,10 +13,10 @@ import { GifsModule } from './gifs/gifs.module';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    appRoutingModule,
     SharedModule,
-    GifsModule,
-    
+    HttpClientModule,
+    PaisModule
   ],
   providers: [],
   bootstrap: [AppComponent]

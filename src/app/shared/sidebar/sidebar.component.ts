@@ -1,26 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { GifsService } from '../../gifs/services/gifs.service';
+import { Component } from '@angular/core';
+import { appRoutingModule } from '../../app-routing.module';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styles: [
+    `
+    li{
+      cursor:pointer;
+    }
+    `
   ]
 })
 export class SidebarComponent {
 
-  //Inyectamos el servicio
-  constructor (private gifsService: GifsService){}
-
-  buscar(termino: string) {
-    console.log(termino);
-    this.gifsService.buscarGifs(termino);
-  }
-
-  get Historial() {
-    return this.gifsService.historial;
-  }
-
+  constructor() { }
 
 
 }

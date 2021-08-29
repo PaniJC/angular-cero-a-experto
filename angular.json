@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "f474dc20-e677-4bf2-b467-6a8f78107081"
+    "analytics": false
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gifsApp": {
+    "paisesApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gifsApp",
+            "outputPath": "dist/paisesApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gifsApp:build:production"
+              "browserTarget": "paisesApp:build:production"
             },
             "development": {
-              "browserTarget": "gifsApp:build:development"
+              "browserTarget": "paisesApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gifsApp:build"
+            "browserTarget": "paisesApp:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "gifsApp"
+  "defaultProject": "paisesApp"
 }
